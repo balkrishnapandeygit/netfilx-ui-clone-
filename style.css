@@ -1,0 +1,593 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    /* Ensure this path is correct relative to your CSS file */
+    background-image: url('images/Capturebg1.PNG');
+    background-size: cover;
+    background-position: center center;
+    height: 70vh;
+    position: relative;
+}
+
+.main .box {
+    height: 70vh;
+    width: 100%;
+    opacity: 0.69;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    padding: 14px 0;
+    position: relative; /* Ensure nav is above the .box overlay */
+    z-index: 10;
+}
+
+
+
+nav div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn {
+    padding: 8px 20px;
+    background-color: rgba(23, 23, 23, 0.4);
+    color: white;
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-red-sm {
+    background-color: #e50914;
+    border: none; /* Red buttons usually don't have a border */
+}
+
+.hero {
+    height: calc(100% - 68px - 100px); /* Adjust height calculation if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+    padding: 0 30px;
+    position: relative; /* Ensure hero is above the .box overlay */
+    z-index: 10;
+}
+
+.hero > :first-child {
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.hero > :nth-child(2) {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hero > :nth-child(3) {
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hero > div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center items when wrapped */
+}
+
+.hero input {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid #333;
+    color: white;
+    flex-grow: 1; /* Allow input to grow */
+    max-width: 400px; /* Limit max width of input */
+}
+
+.btn-red {
+    background-color: #e50914;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.sepration {
+    height: 7px;
+    background-color: rgb(22, 22, 22);
+}
+/* Typo fix from separation to sepration */
+.separation { /* Keep this if you have it elsewhere, or remove if .sepration is consistent */
+    height: 7px;
+    background-color: rgb(22, 22, 22);
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw; /* Keep consistent with other sections */
+    margin: auto;
+    padding: 50px 0;
+    color: white;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+section.first {
+    padding: 70px 0;
+}
+
+section.first > div {
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1; /* Allow text content to take available space */
+    min-width: 300px; /* Ensure content doesn't get too squished */
+}
+
+section.first > div span:first-child {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+section.first > div span:nth-child(2) {
+    font-size: 1.5rem;
+}
+
+.secimg {
+    position: relative;
+    flex: 1; /* Allow image container to take available space */
+    min-width: 400px; /* Ensure image container doesn't get too squished */
+    display: flex; /* Use flex to center image/video if needed */
+    justify-content: center;
+    align-items: center;
+}
+
+.secimg img {
+    width: 555px; /* Fixed width for desktop, adjust with media queries */
+    position: relative;
+    z-index: 10;
+    max-width: 100%; /* Ensure image scales down on smaller screens */
+    height: auto;
+}
+
+.secimg video {
+    position: absolute;
+    top: 85px; /* Adjust this based on specific image/video alignment */
+    right: 0; /* Adjust this based on specific image/video alignment */
+    width: 555px; /* Fixed width for desktop, adjust with media queries */
+    max-width: 100%; /* Ensure video scales down */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures video fits within its bounds */
+}
+
+/* Adjust video positions for specific sections if needed based on the image */
+section.first .secimg video {
+    top: 80px; /* Typical TV video position */
+        left: 48%; /* Center video horizontally */
+    transform: translateX(-50%); /* Adjust to true center */
+    width: 73%; /* Adjusted to fit the TV screen better */
+    height: 54%;
+}
+
+section.third .secimg video {
+    top: 45px; /* Adjusted for device pile */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 63%; /* Adjusted to fit device pile */
+    height: 52%;
+}
+
+
+section.second {
+    padding: 50px 0;
+    flex-direction: row-reverse; /* Swap order for second section */
+}
+
+section.second > div {
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+
+section.second > div span:first-child {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+section.second > div span:nth-child(2) {
+    font-size: 1.5rem;
+}
+
+section.third {
+    padding: 70px 0;
+}
+
+section.third > div {
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+
+section.third > div span:first-child {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+section.third > div span:nth-child(2) {
+    font-size: 1.5rem;
+}
+
+section.fourth {
+    padding: 50px 0;
+    flex-direction: row-reverse; /* Swap order for fourth section */
+}
+
+section.fourth > div {
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+
+section.fourth > div span:first-child {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+section.fourth > div span:nth-child(2) {
+    font-size: 1.5rem;
+}
+
+
+/* --- FAQ Section Corrected Styles --- */
+.faq {
+    background-color: black;
+    padding: 60px 0; /* More vertical padding for the whole section */
+    color: white;
+    text-align: center; /* Center the heading */
+}
+
+.faq h2 {
+    font-size: 3rem;
+    margin-bottom: 40px; /* More space below the heading */
+    text-align: center; /* Ensure heading is centered */
+}
+
+.faqbox {
+    background-color: #303030;
+    color: white;
+    padding: 25px;
+    margin: 10px auto; /* Center the boxes horizontally */
+    max-width: 75vw; /* Make it wider, closer to the content width */
+    width: calc(100% - 40px); /* Adjust width to account for padding/margin on very small screens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: left; /* Align text within the box to the left */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Add a hover effect for FAQ boxes */
+.faqbox:hover {
+    background-color: #404040; /* Slightly lighter on hover */
+}
+
+/* Style for the SVG plus/cross icon in FAQ boxes */
+.faqbox svg {
+    /* Make sure the SVG path color is visible (was #141B34, which is dark) */
+    /* When active, you'd rotate this to make it a cross. This is for the + */
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+/* This is a common practice to make the plus visible.
+   Your SVG uses stroke="#141B34" which is dark. Change stroke to white or just fill the SVG.
+   Alternatively, you can target the path inside the SVG to change its color.
+*/
+.faqbox svg path {
+    stroke: white; /* Change the stroke color to white so it's visible */
+}
+
+
+/* --- Footer Section Corrected Styles --- */
+footer {
+    padding: 60px 0;
+    max-width: 70vw; /* Keep consistent with other sections for alignment */
+    margin: auto;
+    color: #737373;
+    background-color: black; /* Ensure it's black like the body */
+    border-top: 7px solid rgb(22, 22, 22); /* Same separator as other sections */
+    box-sizing: border-box; /* Crucial for responsive padding */
+}
+
+.questions {
+    padding: 10px 0; /* Add vertical padding */
+    margin-bottom: 20px; /* Space below the phone number */
+    font-size: 0.95rem; /* Slightly larger for readability */
+    text-align: left; /* Align left as per Netflix */
+}
+
+.questions a {
+    color: #737373; /* Ensure link color is correct */
+    text-decoration: underline; /* Make it clear it's a link */
+}
+
+.footer {
+    display: grid;
+    /* Adjust minmax to control column width and number. Netflix often uses 4 columns. */
+    /* Use a slightly larger min-width for columns to prevent too many squished columns */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px 80px; /* Increase horizontal gap significantly for clear separation */
+    color: #737373;
+    padding-bottom: 20px; /* Space below the grid of links */
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Adjust gap between individual links in a column */
+}
+
+.footer a {
+    color: #737373;
+    font-size: 0.85rem; /* Slightly larger font for readability */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer a:hover {
+    color: #b3b3b3; /* Lighter color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+/* --- Responsive Media Queries --- */
+
+/* General responsiveness for sections */
+@media (max-width: 1024px) {
+    section {
+        max-width: 85vw;
+        padding: 40px 0;
+    }
+
+    section > div {
+        padding-right: 1.5rem; /* Reduce padding for text */
+        padding-left: 1.5rem;
+    }
+
+    .secimg img,
+    .secimg video {
+        width: 450px; /* Scale down images/videos */
+    }
+
+    section.first .secimg video {
+        width: 70%;
+        height: 52%;
+        top: 75px;
+    }
+
+    section.third .secimg video {
+        width: 60%;
+        height: 50%;
+        top: 35px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main .hero > :first-child {
+        font-size: 2.5rem;
+    }
+
+    .main .hero > :nth-child(2) {
+        font-size: 1.2rem;
+    }
+
+    .main .hero > :nth-child(3) {
+        font-size: 1rem;
+    }
+
+    .hero input {
+        width: 100%; /* Allow input to take full width of its container */
+        max-width: 350px; /* Smaller max width */
+    }
+
+    .btn-red {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    /* Sections stack vertically */
+    section {
+        flex-direction: column; /* Stack columns */
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    section.first > div,
+    section.second > div,
+    section.third > div,
+    section.fourth > div {
+        padding: 0 20px; /* Adjust padding for stacked content */
+    }
+
+    section.second,
+    section.fourth {
+        flex-direction: column; /* Ensure these also stack */
+    }
+
+    .secimg {
+        order: -1; /* Place image above text when stacked */
+        margin-bottom: 20px; /* Space between image and text */
+        min-width: unset; /* Remove min-width for full flexibility */
+    }
+
+    .secimg img,
+    .secimg video {
+        width: 100%; /* Max out width within their container */
+        max-width: 500px; /* Keep a reasonable max-width */
+        height: auto;
+    }
+
+    section.first .secimg video {
+        width: 70%;
+        height: 52%;
+        top: 75px; /* Adjust based on new image size */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    section.third .secimg video {
+        width: 60%;
+        height: 50%;
+        top: 35px; /* Adjust based on new image size */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    section h2,
+    section span:first-child {
+        font-size: 2rem !important; /* Important to override larger font sizes */
+    }
+
+    section span:nth-child(2) {
+        font-size: 1.2rem !important;
+    }
+
+    /* FAQ */
+    .faq h2 {
+        font-size: 2.5rem;
+    }
+    .faqbox {
+        font-size: 1.2rem;
+        padding: 20px;
+        max-width: 90vw; /* Wider on smaller screens */
+        width: calc(100% - 30px);
+    }
+
+    /* Footer */
+    footer {
+        max-width: 90vw; /* Allow wider on smaller screens */
+        padding: 40px 20px; /* Add horizontal padding for smaller screens */
+    }
+
+    .footer {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust columns */
+        gap: 15px 40px; /* Reduce gap */
+    }
+    .questions {
+        text-align: center; /* Center on smaller screens if sections are centered */
+    }
+}
+
+@media (max-width: 600px) {
+    .main .hero > :first-child {
+        font-size: 2rem;
+    }
+
+    .main .hero > :nth-child(2),
+    .main .hero > :nth-child(3) {
+        font-size: 1rem;
+    }
+
+    .hero > div {
+        flex-direction: column; /* Stack email input and button */
+        gap: 10px;
+    }
+
+    .hero input,
+    .btn-red {
+        width: 90%; /* Adjust width for stacked elements */
+        max-width: 300px; /* Maintain reasonable max width */
+    }
+
+    section h2,
+    section span:first-child {
+        font-size: 1.8rem !important;
+    }
+
+    section span:nth-child(2) {
+        font-size: 1rem !important;
+    }
+
+    .secimg {
+        margin-bottom: 15px;
+    }
+
+    section.first .secimg video {
+        width: 70%;
+        height: 52%;
+        top: 50px; /* Further adjustment for smaller TV */
+    }
+
+    section.third .secimg video {
+        width: 60%;
+        height: 50%;
+        top: 25px; /* Further adjustment for smaller devices */
+    }
+
+    /* FAQ */
+    .faq h2 {
+        font-size: 2rem;
+    }
+    .faqbox {
+        font-size: 15px;
+        padding: 8px;
+        max-width: 95vw;
+        width: calc(100% - 20px);
+    }
+
+    /* Footer */
+    footer {
+        padding: 30px 15px; /* Even less padding */
+    }
+    .footer {
+        grid-template-columns: 1fr; /* Stack into a single column on very small phones */
+        gap: 10px;
+    }
+    .footer-item {
+        align-items: center; /* Center items if stacked */
+    }
+    .questions {
+        text-align: center;
+    }
+}
